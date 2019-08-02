@@ -70,6 +70,10 @@ export default class Init extends Component {
     const { uuid, name, title, description, players } = this.state;
     return (
       <div className='control_panel'>
+        <div className="area_map">
+          <Map />
+        </div>
+        
         <div className='user_info'>
           <h3>Your information:</h3>
           <p>{uuid}</p>
@@ -79,9 +83,7 @@ export default class Init extends Component {
             other player in the same area as you: {players.map(player => player)}
           </p>
         </div>
-        <div className="area_map">
-          <Map />
-        </div>
+        
         
         <div className="directions">
           <button
