@@ -69,19 +69,15 @@ export default class Init extends Component {
   render() {
     const { uuid, name, title, description, players } = this.state;
     return (
-      <div className='control_panel'>
-        <div className='user_info'>
-          <h3>Your information:</h3>
-          <p>{uuid}</p>
-          <p>Your name: {name}</p>
-          <p>you are here at {title}</p>
-          <p>
-            other player in the same area as you: {players.map(player => player)}
-          </p>
-        </div>
-        <div className="area_map">
-          <Map />
-        </div>
+      <div>
+        <h3>Your information:</h3>
+        <p>{uuid}</p>
+        <p>Your name: {name}</p>
+        <p>you are here at {title}</p>
+        <p>
+          other player in the same area as you: {players.map(player => player)}
+        </p>
+        <Map />
         
         <div className="directions">
           <button
@@ -110,7 +106,7 @@ export default class Init extends Component {
           </button>
           
         </div>
-        <div className ='disc'>
+        <div>
         <h2>{title}</h2>
         <p>{description}</p>
         </div>
